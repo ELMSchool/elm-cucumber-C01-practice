@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import utils.Driver;
 
-public class LoginPage {
+public class LoginPage extends Navigation{
 	
 	public LoginPage() {
 		
@@ -20,8 +20,11 @@ public class LoginPage {
 	public WebElement passwordInputBox;
 	
 	@FindBy(css = "button[type='submit']")
-	WebElement loginButton;
-	
+	public WebElement loginButton;
+
+	@FindBy(xpath = "//p[.='Invalid credentials']")
+	public WebElement loginErrorMessage;
+
 	public void loginToOrangHRM(String username, String password) {
 		
 		usernameInputBox.sendKeys(username);

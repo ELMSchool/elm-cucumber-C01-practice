@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import io.cucumber.java.en.When;
 import utils.Driver;
 
-public class DashboardPage {
+public class DashboardPage extends Navigation{
 
 	public DashboardPage() {
 		PageFactory.initElements(Driver.getDriver(), this);
